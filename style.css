@@ -4,3 +4,17 @@ body {
 }
 .header {
     text-align: center; }
+
+.left{
+    float:left;
+width: 600px;
+}    
+.content{
+    margin-top: 100px;
+}
+.PATRICK_SUCK{
+    display: inline-block
+}
+.clear{
+    clear: both;
+}
