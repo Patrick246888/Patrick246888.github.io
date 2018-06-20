@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           
+        
+            table tr td{
+                width: 33.33%;
+                border: 5px double lime
+            }
+            img{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <table>  <!-- table -->
+    <tr>    <!-- table row -->
+<td>        <!-- table data-->
+<img src="./img/coke.jpg" alt="Classic Coke">
+</td>
+
+<td>
+<img src="./img/CokeZero.jpeg" alt="Zero Coke">
+</td>
+
+<td>
+<img src="./img/dietcoke.jpg" alt="Diet Coke">
+</td>
+</tr>
+
+    </tr>
+    <tr>   
+        <td>        
+        <h3>Classic Coke</h3>
+        <button onclick="showPriceClassicCoke()">Show Price for Classic Coke</button>
+        <div id="classicokeprice"></div>
+        </td>
+        
+        <td>
+    <h3>Zero Coke</h3>
+    <button>Show Price for Zero Coke</button>
+    <div id="zerocokeprice"></div>
+        </td>
+        
+        <td>
+    <h3>Diet Coke</h3>
+    <button>Show Price for Diet Coke</button>
+    <div id="dietcokeprice"></div>
+        </td>
+        
+            </tr>
+            </table>
+        <script>
+            function showPriceClassicCoke(){
+                 console.log('$100,000');
+                 document.getElementById("classicokeprice").innerHTML = "$100,000";
+            }
+            function showPriceZeroCoke(){
+                console.log('%200,000');
+                document.getElementById("zerocokeprice").innerHTML = "$200,000";
+            }    
+            function showPriceDietCoke(){
+                console.log('200,000');
+                document.getElementById("dietcokeprice").innerHTML = "%200,000";
+            }
+        </script>
+
+        
+    </body>
+</html>
