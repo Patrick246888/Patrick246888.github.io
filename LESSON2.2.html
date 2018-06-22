@@ -11,13 +11,17 @@
             img{
                 width: 100%;
             }
+
+.hide {
+    display: none;
+}
+
         </style>
     </head>
     <body>
-       
-        <table>  <!-- table -->
-    <tr>    <!-- table row -->
-<td>        <!-- table data-->
+        <table> 
+    <tr>  
+<td>        
 <img src="./img/coke.jpg" alt="Classic Coke">
 </td>
 
@@ -34,20 +38,22 @@
     <tr>   
         <td>        
         <h3>Classic Coke</h3>
-        <button onclick="showPriceClassicCoke()">Show Price for Classic Coke</button>
-        <div id="classicokeprice"></div>
+        <button onclick="showPriceClassicCoke()"id="btn_show_ClassicCoke">Show Price for Classic Coke</button>
+        <div id="classiccokeprice"></div>
+        <button onclick="hidepriceClassicCoke()" id="btn_hide_ClassicCoke" class="hide">Hide Price</button>     
         </td>
-        
         <td>
     <h3>Zero Coke</h3>
-    <button>Show Price for Zero Coke</button>
+    <button onclick="showPriceZeroCoke()"id="btn_show_ZeroCoke">Show Price for Zero Coke</button>
     <div id="zerocokeprice"></div>
+    <button onclick="hidepriceZeroCoke()" id="btn_hide_ZeroCoke" class="hide">Hide Price</button>
         </td>
         
         <td>
     <h3>Diet Coke</h3>
-    <button>Show Price for Diet Coke</button>
+    <button onclick="showPriceDietCoke()"id="btn_show_DietCoke">Show Price for Diet Coke</button>
     <div id="dietcokeprice"></div>
+    <button onclick="hidepriceDietCoke()"id="btn_hide_DietCoke" class="hide">Hide Price</button>
         </td>
         
             </tr>
@@ -55,16 +61,47 @@
         <script>
             function showPriceClassicCoke(){
                  console.log('$100,000');
-                 document.getElementById("classicokeprice").innerHTML = "$100,000";
+                 document.getElementById("classiccokeprice").innerHTML = "$100,000";
+                 document.getElementById("btn_show_ClassicCoke"). style.display = "none";
+                 document.getElementById("btn_hide_ClassicCoke").style.display = "inline-block";
             }
             function showPriceZeroCoke(){
-                console.log('%200,000');
+                console.log('200,000');
                 document.getElementById("zerocokeprice").innerHTML = "$200,000";
+                document.getElementById("btn_show_ZeroCoke"). style.display = "none";
+                 document.getElementById("btn_hide_ZeroCoke").style.display = "inline-block";
             }    
             function showPriceDietCoke(){
                 console.log('200,000');
-                document.getElementById("dietcokeprice").innerHTML = "%200,000";
+                document.getElementById("dietcokeprice").innerHTML = "$200,000";
+                document.getElementById("btn_show_DietCoke"). style.display = "none";
+                 document.getElementById("btn_hide_DietCoke").style.display = "inline-block";
             }
+            //make a function that:
+            // 1. will hide the "hide price button"
+            // 2. it will hide the price
+            // 3. it will show the "show price" button
+
+            function hidepriceClassicCoke(){
+                document.getElementById("classiccokeprice").innerHTML = "";
+                document.getElementById("btn_show_ClassicCoke").style.display = "inline-block";
+                document.getElementById("btn_hide_ClassicCoke").style.display = "none";
+            }
+                function hidepriceZeroCoke(){
+                document.getElementById("zerocokeprice").innerHTML = "";
+                document.getElementById("btn_show_ZeroCoke").style.display = "inline-block";
+                document.getElementById("btn_hide_ZeroCoke").style.display = "none";
+
+            }
+            function hidepriceDietCoke(){
+                document.getElementById("dietcokeprice").innerHTML = "";
+                document.getElementById("btn_show_DietCoke").style.display = "inline-block";
+                document.getElementById("btn_hide_DietCoke").style.display = "none";
+}
+
+        
+        
+
         </script>
 
         
