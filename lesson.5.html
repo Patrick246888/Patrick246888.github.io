@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+   <table>
+  <tr>
+      <td>
+         <img src="myserrycard.png" width="300px">
+      </td>
+      <td>
+            <img src="myserrycard.png" width="300px">
+         </td>
+         <td>
+                <img src="myserrycard.png" width="300px">
+             </td>
+                                                             
+      </tr>
+
+      <tr>
+            <td>
+                    <img src="myserrycard.png" width="300px">
+                 </td>
+                 <td>
+                        <img src="myserrycard.png" width="300px">
+                     </td>
+                     <td>
+                            <img src="myserrycard.png" width="300px">
+                     </td>
+                                                        
+                                                                  
+      </tr>
+</table>
+<script>
+var random = Math.floor(Math.random()*6); // this will select a random number from 1-6 1.4,
+$("td").eq(random).addClass("looosser");
+$("td").click( function(){
+ // alert("you clicked a card");
+ if ($(this).hasClass("looosser")){
+    
+     $(this).find("img").attr("src", "./img/....t.jpg");
+ }
+ else {
+   
+     $(this).find("img").attr("src", "./img/gifpic.gif");
+ }
+});
+// document.getElementByTagName("td")
+    </script>
+    </body>
+
+
+</html>
+    
